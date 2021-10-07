@@ -13,12 +13,14 @@ export default function DetalheProduto(props) {
     // O método JSON. parse() analisa uma string JSON, construindo o valor ou um objeto JavaScript descrito pela string. Uma função reviver opcional pode ser fornecida para executar uma transformação no objeto resultante antes de ser retornada.
     // JSON ou JavaScript Object Notation, é um modelo para armazenamento e transmissão de informações no formato texto e que é bastante utilizado por aplicações Web que trabalham com a tecnologia AJAX.
 
-    // function comprar() {
-    //     let carrinho = Cookies.get('carrinho');
-    //     carrinho = carrinho !== undefined
-    //                     ? JSON.parse (carrinho)
-    //                     : [];
-    // }
+    // Lê os elementos presentes(produtos) no carrinho
+
+    function comprar() {
+        let carrinho = Cookies.get('carrinho');
+        carrinho = carrinho !== undefined
+                        ? JSON.parse (carrinho)
+                        : [];
+    }
 
     return(
         <Container>
