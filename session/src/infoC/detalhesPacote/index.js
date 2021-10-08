@@ -1,5 +1,5 @@
 import Cookies from 'js-cookie'
-import useState from 'react';
+import {useState} from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import {Container} from './styled'
 
@@ -17,10 +17,10 @@ export default function DetalhesPacote(props) {
 
     function comprar() {
         let carrinho = Cookies.get('carrinho');
-        carrinho = carrinho !== null
+        carrinho = carrinho !== undefined
                         ? JSON.parse (carrinho)
                         : [];
-    }
+    
 
     if (carrinho.some(item => item.id === produto.id) === false)
         carrinho.push({...produto, qtd: 1 });
@@ -28,7 +28,8 @@ export default function DetalhesPacote(props) {
         Cookies.set('carrinho', JSON.stringify(carrinho));
 
         navigation.push('/carrinho');
-
+      }
+      
     return(
         <Container>
             <div>
@@ -49,7 +50,7 @@ export default function DetalhesPacote(props) {
           <h2> Especificações </h2>
           <div> {produto.especificacoes} </div>
 
-          {/* <div> <button onClick={comprar}> Comprar </button> </div> */}
+          <div> <button onClick={comprar}> Comprar </button> </div>
         </div>
 
         </Container>

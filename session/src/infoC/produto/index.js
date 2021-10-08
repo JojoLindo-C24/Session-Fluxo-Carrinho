@@ -19,7 +19,7 @@ export default function Produto(props) {
                     </Link> */}
 
                     <Link to={{
-                        pathname: './detalhesPacote',
+                        pathname: '/detalhe',
                         state: props.info
                     }}>
                         <button className="mais-info"> Mais Informações </button>

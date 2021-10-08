@@ -61,10 +61,12 @@ export default function Home() {
 
       <div className="lista-produtos">
         
-        {produtos.map(item => 
-            <Produto info={item} />
-        )}
-
+      {produtos.map(item => 
+              <Produto 
+               key={item.id}
+               info={item} />
+          )}
+          
       </div>
 
 

@@ -3,9 +3,8 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from './infoC/home'
 
-import DetalheProduto from "./infoC/detalhesPacote";
-
 import './index.css'
+import DetalhesPacote from "./infoC/detalhesPacote/index.js";
 
 // import DetalheProduto from '../src/infoC/detalheProduto'
 // import Carrinho from '../src/infoC/carrinho'
@@ -15,8 +14,8 @@ ReactDOM.render(
   <StrictMode>
     <BrowserRouter>
       <Switch>
-        <Route path="/home" exact={true} component={Home} />
-        <Route path="/detalhe" component={DetalheProduto} />
+        <Route path="/" exact={true} component={Home} />
+        <Route path="/detalhe" component={DetalhesPacote} />
         {/* <Route path="/detalhe" component={DetalheProduto} />
         <Route path="/carrinho" component={Carrinho} /> */}
       </Switch>
