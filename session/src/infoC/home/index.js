@@ -1,10 +1,6 @@
 import { Container } from './styled'
-
 import Produto from '../produto'
 import { useState } from 'react'
-
-
-
 
 export default function Home() {
   const [produtos, setProdutos] = useState([]);
@@ -22,7 +18,7 @@ export default function Home() {
       },
       {
         id: 2,
-        imagem: "../../../public/assets/images/HopiHari1.png",
+        imagem: "https://blog.hopihari.com.br/wp-content/uploads/2021/01/hopi-hari-hora-de-agradecer-profissionais-de-saude.jpg",
         titulo: "Hopi Hari",
         componentes: "- 2 ingressos",
         preco: "R$ 160,00",
@@ -31,7 +27,16 @@ export default function Home() {
       },
       {
         id: 3,
-        imagem: "../../../public/assets/images/HopiHari1.png",
+        imagem: "https://blog.hopihari.com.br/wp-content/uploads/2021/01/hopi-hari-hora-de-agradecer-profissionais-de-saude.jpg",
+        titulo: "Hopi Hari",
+        componentes: "- 2 ingressos",
+        preco: "R$ 160,00",
+        descricao: "Esse produto é muito legal e você deve comprá-lo porque sua vida será feliz!!!",
+        botao: "../../../public/assets/images/compra(1).svg"
+      },
+      {
+        id: 4,
+        imagem: "https://blog.hopihari.com.br/wp-content/uploads/2021/01/hopi-hari-hora-de-agradecer-profissionais-de-saude.jpg",
         titulo: "Hopi Hari",
         componentes: "- 2 ingressos",
         preco: "R$ 160,00",
