@@ -5,7 +5,7 @@ export default function Produto(props) {
     return(
         <Container>
             <div className="bloco">
-                <img className="imagem" src='https://blog.hopihari.com.br/wp-content/uploads/2021/01/hopi-hari-hora-de-agradecer-profissionais-de-saude.jpg' alt="" />
+                <img className="imagem" src={props.info.imagem} alt="" />
                 <div className="conteudo">
                     <div className="titulo"> {props.info.titulo} </div> <br></br>
                     <div className="componentes"> {props.info.componentes} </div>

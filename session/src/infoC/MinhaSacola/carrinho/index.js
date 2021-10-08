@@ -1,18 +1,12 @@
-import Cookies from 'js-cookie'
 import { useState } from 'react';
 import Contador from '../contador'
 import { Container, RemoverIcon } from './styled'
 
 
 
-
-
-
 export default function CarrinhoItem(props) {
   // Carrega a Variável de Estado com o parâmetro recebido da tela Carrinho
   const [produto, setProduto] = useState(props.info);
-
-  
 
 
   function alterarQtd(qtd) {
@@ -35,7 +29,7 @@ export default function CarrinhoItem(props) {
     <Container>
       
       <div>
-        <img className="capa" src={produto.imagem} alt="" />
+      <img className="capa" src={produto.imagem} alt="" />
         <Contador onChange={alterarQtd} value={produto.qtd} />
       </div>
 
@@ -46,6 +40,11 @@ export default function CarrinhoItem(props) {
       <div className="preco"> 
         <span>Preço unitário</span> <br /> 
         {produto.preco} 
+      </div>
+
+      <div className="components"> 
+        <span>Componentes</span> <br /> 
+        {produto.components} 
       </div>
 
       <div className="qtd"> 
